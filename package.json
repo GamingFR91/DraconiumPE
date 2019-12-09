@@ -1,10 +1,17 @@
-"engines":{
-
-    "node": "8.x",
-
-    "npm": "*"
-
+{
+  "name": "DraconiumPE",
+  "version": "1.0.0",
+  "description": "bot de tuto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "GamingFR91",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^10.0.1"
+  }
+}
 
 
 
