@@ -1,6 +1,6 @@
 "engines":{
 
-    "node": "10.x",
+    "node": "8.x",
 
     "npm": "*"
 
