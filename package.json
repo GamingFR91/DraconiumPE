@@ -1,7 +1,62 @@
-  "engines": {
+{
+  
+"name": "DraconiumPE",
 
-    "node": "8.x",
+  "version": "1.0.0",
 
-    "npm": "*"
+  "description": "Bot compteur de joueurs sur serveur Minecraft",
+
+  "main": "index.js",
+
+  "scripts": {
+
+    "test": "eslint .",
+
+    "lint": "eslint --fix .",
+
+    "start": "node index.js"
 
   },
+
+  "engines": {
+
+    "node": ">=8"
+
+  },
+
+  "repository": {
+
+    "type": "git",
+
+    "url": "git+https://github.com/GamingFR91/DraconiumPE"
+
+  },
+
+  "author": "GamingFR91",
+
+
+
+  "bugs": {
+
+    "url": "https://github.com/GamingFR91/DraconiumPE/issues"
+
+  },
+
+  "homepage": "https://github.com/GamingFR91/DraconiumPE",
+
+  "dependencies": {
+
+    "discord.js": "github:discordjs/discord.js#85738b68849b6092b8f43a044937dc8a508b7536",
+
+    "minecraft-query": "^1.0.9",
+
+    
+  },
+
+  "devDependencies": {
+
+    "eslint": "^4.19.1"
+
+  }
+
+}
