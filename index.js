@@ -28,4 +28,4 @@ client.on('message', message => {
 
 // THIS  MUST  BE  THIS  WAY
 
-client.login(BOT_TOKEN);//BOT_TOKEN is the Client Secret
+client.login("BOT_TOKEN");//BOT_TOKEN is the Client Secret
