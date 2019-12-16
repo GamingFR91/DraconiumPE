@@ -22,18 +22,22 @@ bot.on("message", function(message) {
     var command = args[0].toLowerCase();
 
 // Commands.
-    if (command == "test") {
+    if (command == "help") {
         var embedhelpmember = new Discord.RichEmbed()
-        
-            .setAuthor("Info Serveur")
-            .addField("Bientôt")
-            
+            .setAuthor("💬 Liste des Commandes.")
+            .addField(" - avatar", "Montre ta Photo de Profil.")
+            .addField(" - ping", "PING PONG.")
             .setColor(0x00FFEE)
             .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
-            
+        var embedhelpadmin = new Discord.RichEmbed()
+            .setAuthor("💬 Commandes de Modération.")
+            .addField(" - clear", "Clear jusqu'à`99` Messages.")
+            .addField(" - kick", "Kick quelqu'un du serveur.")
+            .setColor(0x00FFEE)
+            .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
             message.channel.send(embedhelpmember)
         if(message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(embedhelpadmin);
-    };
+};
 
     if (command == "avatar") {
         let member = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
@@ -83,22 +87,7 @@ bot.on("message", function(message) {
         adminlog.send(kickEmbed);
     };
     
-    if (command == "help") {
-        var embedhelpmember = new Discord.RichEmbed()
-            .setAuthor("💬 Liste des Commandes.")
-            .addField(" - avatar", "Montre ta Photo de Profil.")
-            .addField(" - ping", "PING PONG.")
-            .setColor(0x00FFEE)
-            .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
-        var embedhelpadmin = new Discord.RichEmbed()
-            .setAuthor("💬 Commandes de Modération.")
-            .addField(" - clear", "Clear jusqu'à`99` Messages.")
-            .addField(" - kick", "Kick quelqu'un du serveur.")
-            .setColor(0x00FFEE)
-            .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
-            message.channel.send(embedhelpmember)
-        if(message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(embedhelpadmin);
-};
+
 });
 
 // Bot Login.
