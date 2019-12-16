@@ -46,6 +46,7 @@ if (command == "server") {
             
             .setColor(0x00FFEE)
             .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
+if(message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(embedhelpadmin);
    };
     if (command == "avatar") {
         let member = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
