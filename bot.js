@@ -26,22 +26,7 @@ bot.on("message", function(message) {
         var embedhelpmember = new Discord.RichEmbed()
         
             .setAuthor("Info Serveur")
-            .addField("q.fullStat()
-  .then(success => {
-
-    console.log(success);
-
-    return q.basicStat()
-
-  })
-
-  .then(success => {
-
-    console.log(success);
-
-    q.close();
-
-  })")
+            .addField("Bientôt")
             
             .setColor(0x00FFEE)
             .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
