@@ -40,7 +40,7 @@ bot.on("message", function(message) {
 };
 
 if (command == "server") {
-        var embedhelpmember = new Discord.RichEmbed()
+        var embedserverinfo = new Discord.RichEmbed()
             .setAuthor("Server Status")
             .addField("En Developpement")
             .setColor(0x00FFEE)
