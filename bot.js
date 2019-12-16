@@ -22,10 +22,10 @@ bot.on("message", function(message) {
     var command = args[0].toLowerCase();
 
 // Commands.
-    if (command == "help") {
+    if (command == "test") {
         var embedhelpmember = new Discord.RichEmbed()
-            .setAuthor("💬 Liste des Commandes.")
-            .addField(" - avatar", "Montre ta Photo de Profil.")
+            .setAuthor("Info Serveur")
+            .addField("Joueurs: kv[15]/kv[17]")
             .addField(" - ping", "PING PONG.")
             .setColor(0x00FFEE)
             .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
