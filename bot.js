@@ -41,8 +41,8 @@ bot.on("message", function(message) {
 };
 
 if (command == "server") {
-    message.channel.send("**__Server Info__**", 
-                        "*Bientôt*ts");
+    message.channel.send("**__Server Info__**"
+);
     message.channel.send("*Bientôt*");
    };
     
