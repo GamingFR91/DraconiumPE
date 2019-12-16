@@ -26,8 +26,23 @@ bot.on("message", function(message) {
         var embedhelpmember = new Discord.RichEmbed()
         
             .setAuthor("Info Serveur")
-            .addField("Joueurs: kv[15]/kv[17]")
-            .addField(" - ping", "PING PONG.")
+            .addField("q.fullStat()
+  .then(success => {
+
+    console.log(success);
+
+    return q.basicStat()
+
+  })
+
+  .then(success => {
+
+    console.log(success);
+
+    q.close();
+
+  })")
+            
             .setColor(0x00FFEE)
             .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
             
