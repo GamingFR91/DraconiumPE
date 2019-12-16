@@ -24,17 +24,13 @@ bot.on("message", function(message) {
 // Commands.
     if (command == "test") {
         var embedhelpmember = new Discord.RichEmbed()
+        this.emitter.emit('full_stat', {
             .setAuthor("Info Serveur")
             .addField("Joueurs: kv[15]/kv[17]")
             .addField(" - ping", "PING PONG.")
             .setColor(0x00FFEE)
             .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
-        var embedhelpadmin = new Discord.RichEmbed()
-            .setAuthor("💬 Commandes de Modération.")
-            .addField(" - clear", "Clear jusqu'à`99` Messages.")
-            .addField(" - kick", "Kick quelqu'un du serveur.")
-            .setColor(0x00FFEE)
-            .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
+
             message.channel.send(embedhelpmember)
         if(message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(embedhelpadmin);
     };
