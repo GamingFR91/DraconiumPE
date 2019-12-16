@@ -56,7 +56,7 @@ bot.on("message", function(message) {
         message.channel.send("**:ping_pong: PONG!**");
     };
 
-    if(command === "prune") {
+    if(command === "clear") {
         if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply("**🔒 Sorry, you can't do that.**");
         var messagesToDelete = args[1];
         if (!args[1]) return message.channel.send("❌ Merci de donner le nombre de message à Clear!");
@@ -86,7 +86,23 @@ bot.on("message", function(message) {
         message.guild.member(kUser).kick(kReason);
         adminlog.send(kickEmbed);
     };
-
+    
+    if (command == "help") {
+        var embedhelpmember = new Discord.RichEmbed()
+            .setAuthor("💬 Liste des Commandes.")
+            .addField(" - avatar", "Montre ta Photo de Profil.")
+            .addField(" - ping", "PING PONG.")
+            .setColor(0x00FFEE)
+            .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
+        var embedhelpadmin = new Discord.RichEmbed()
+            .setAuthor("💬 Commandes de Modération.")
+            .addField(" - clear", "Clear jusqu'à`99` Messages.")
+            .addField(" - kick", "Kick quelqu'un du serveur.")
+            .setColor(0x00FFEE)
+            .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
+            message.channel.send(embedhelpmember)
+        if(message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(embedhelpadmin);
+};
 });
 
 // Bot Login.
