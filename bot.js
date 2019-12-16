@@ -40,26 +40,10 @@ bot.on("message", function(message) {
 };
 
 if (command == "server") {
-        var embedserverinfo = new Discord.RichEmbed()
-            .setAuthor("Server Status")
-            .addField("En Developpement")
-            .setColor(0x00FFEE)
-            .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
-if(message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(embedhelpadmin);
-
+    message.channel.send("**__Server Info__**");
+    message.channel.send("*Bientôt*");
    };
-    if (command == "avatar") {
-        let member = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-        message.channel.send({
-               embed: {
-                  title: `${member.displayAvatarURL}'s Profile Picture.`,
-                  image: {
-                      url: member.AvatarURL
-                  },
-                  color: 0x00FFEE
-               }
-        })
-    };
+    
 
     if (command == "ping") {
         message.channel.send("**:ping_pong: PONG!**");
