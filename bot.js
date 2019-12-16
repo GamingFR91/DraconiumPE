@@ -48,7 +48,22 @@ if (command == "server") {
    };
     
 if (command == "test") {
-    message.channel.send("Players: kv[15]/kv[17]") 
+    message.channel.send("q.fullStat()
+  .then(success => {
+
+    console.log(success);
+
+    return q.basicStat()
+
+  })
+
+  .then(success => {
+
+    console.log(success);
+
+    q.close();
+
+  })") 
 
 
 };
