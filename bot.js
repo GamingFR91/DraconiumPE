@@ -30,7 +30,7 @@ bot.on("message", function(message) {
             .addField(" - ping", "PING PONG.")
             .setColor(0x00FFEE)
             .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
-
+            });
             message.channel.send(embedhelpmember)
         if(message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(embedhelpadmin);
     };
