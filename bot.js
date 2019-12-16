@@ -39,6 +39,14 @@ bot.on("message", function(message) {
         if(message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(embedhelpadmin);
 };
 
+if (command == "server") {
+        var embedhelpmember = new Discord.RichEmbed()
+            .setAuthor("Server Status")
+            .addField("En Developpement")
+            
+            .setColor(0x00FFEE)
+            .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
+   };
     if (command == "avatar") {
         let member = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         message.channel.send({
@@ -87,14 +95,7 @@ bot.on("message", function(message) {
         adminlog.send(kickEmbed);
     };
     
-if (command == "server") {
-        var embedhelpmember = new Discord.RichEmbed()
-            .setAuthor("Server Status")
-            .addField("En Developpement")
-            
-            .setColor(0x00FFEE)
-            .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
-   };
+
 });
     
 
