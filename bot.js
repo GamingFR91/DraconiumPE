@@ -1,5 +1,6 @@
 const Discord = require("discord.js"); // We Call The Packages.
 const Query = require("minecraft-query");
+const q = new Query({host: 'game01.ouiheberg.com', port: 25561, timeout: 7500});
 // const PREFIX = "<"; // You can change this Prefix to whatever you want.
 const PREFIX = process.env.PREFIX;
 
@@ -46,7 +47,11 @@ if (command == "server") {
     message.channel.send("*Bientôt*");
    };
     
+if (command == "test") {
+    message.channel.send("Players: kv[15]/kv[17]") 
 
+
+};
     if (command == "ping") {
         message.channel.send("**:ping_pong: PONG!**");
     };
