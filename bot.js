@@ -28,7 +28,7 @@ bot.on("message", function(message) {
             .addField(" - avatar", "Montre ta Photo de Profil.")
             .addField(" - ping", "PING PONG.")
             .setColor(0x00FFEE)
-            .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
+            .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
         var embedhelpadmin = new Discord.RichEmbed()
             .setAuthor("💬 Commandes de Modération.")
             .addField(" - clear", "Clear jusqu'à`99` Messages.")
@@ -87,8 +87,16 @@ bot.on("message", function(message) {
         adminlog.send(kickEmbed);
     };
     
-
+if (command == "help") {
+        var embedhelpmember = new Discord.RichEmbed()
+            .setAuthor("Server Status")
+            .addField("En Developpement")
+            
+            .setColor(0x00FFEE)
+            .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
+   };
 });
+    
 
 // Bot Login.
 // bot.login('YourAwesomeBotToken');
