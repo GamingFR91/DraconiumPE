@@ -25,7 +25,7 @@ bot.on("message", function(message) {
     if (command == "help") {
         var embedhelpmember = new Discord.RichEmbed()
             .setAuthor("💬 Liste des Commandes.")
-            .addField(" - avatar", "Montre ta Photo de Profil.")
+            .addField(" - server", "Montre les informations du serveur MCPE.")
             .addField(" - ping", "PING PONG.")
             .setColor(0x00FFEE)
             .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
@@ -87,7 +87,7 @@ bot.on("message", function(message) {
         adminlog.send(kickEmbed);
     };
     
-if (command == "help") {
+if (command == "server") {
         var embedhelpmember = new Discord.RichEmbed()
             .setAuthor("Server Status")
             .addField("En Developpement")
