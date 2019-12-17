@@ -6,8 +6,8 @@ var bot = new Discord.Client();
 
 // Events.
 bot.on("ready", function() {
-    bot.user.setGame(`Hi, Im New Bot On Discord!`);
-    console.log(`${bot.user.username} is Ready!`);
+    bot.user.setGame(`/help | Draconium`);
+    console.log(`${bot.user.username} est Prêt!`);
 });
 
 bot.on("message", function(message) {
@@ -24,13 +24,13 @@ bot.on("message", function(message) {
 // Commands.
     if (command == "help") {
         var embedhelpmember = new Discord.RichEmbed()
-            .setAuthor("💬 Command List.")
-            .addField(" - avatar", "Affiche ton avatar(non fonctionnel pour l'instant.")
+            .setAuthor("💬 Liste des Commandes.")
+            .addField(" - avatar", "Affiche ton avatar(non fonctionnel pour l'instant).")
             .addField(" - ping", "PING PONG.")
             .setColor(0x00FFEE)
             .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
         var embedhelpadmin = new Discord.RichEmbed()
-            .setAuthor("💬 Moderator Commands.")
+            .setAuthor("💬 Commandes de Modération.")
             .addField(" - clear", "Clear jusqu'à **99** Messages.")
             .addField(" - kick", "Expulser un membre du serveur.")
             .setColor(0x00FFEE)
