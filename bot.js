@@ -48,6 +48,8 @@ bot.on("message", function(message) {
             .addField("IP:", "Soon...")
 
             .addField("Port:", "Soon...")
+            
+            .addField("Statut:", "En cours de Dev")
 
             .setColor(0x00FFEE)
 
