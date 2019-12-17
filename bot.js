@@ -63,16 +63,27 @@ bot.on("message", function(message) {
     };
 
     if (command == "avatar") {
+
         let member = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+
         message.channel.send({
+
                embed: {
+
                   title: `${member.displayAvatarURL}'s Profile Picture.`,
+
                   image: {
+
                       url: member.AvatarURL
+
                   },
+
                   color: 0x00FFEE
+
                }
+
         })
+
     };
 
     if (command == "ping") {
