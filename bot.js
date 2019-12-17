@@ -66,9 +66,9 @@ bot.on("message", function(message) {
         let member = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         message.channel.send({
                embed: {
-                  title: `${member}'s Profile Picture.`,
+                  title: `${member.displayAvatarURL}'s Profile Picture.`,
                   image: {
-                      url: member.user.displayAvatarURL
+                      url: member.AvatarURL
                   },
                   color: 0x00FFEE
                }
