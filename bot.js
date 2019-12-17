@@ -48,22 +48,8 @@ if (command == "server") {
    };
     
 if (command == "test") {
-    message.channel.send("q.fullStat()
-  .then(success => {
-
-    console.log(success);
-
-    return q.basicStat()
-
-  })
-
-  .then(success => {
-
-    console.log(success);
-
-    q.close();
-
-  })") 
+    message.channel.send("Aucun Test pour le moment
+") 
 
 
 };
