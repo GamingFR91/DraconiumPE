@@ -42,14 +42,14 @@ bot.on("message", function(message) {
 };)
 
 if (command == "server") {
-    message.channel.send("**__Server Info__**"
-);
+    message.channel.send("**__Server Info__**");
+
     message.channel.send("*Bientôt*");
    };
     
 if (command == "test") {
-    message.channel.send("Aucun Test pour le moment
-") 
+    message.channel.send("Aucun Test pour le moment");
+
 
 
 };
