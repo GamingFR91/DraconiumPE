@@ -28,13 +28,13 @@ bot.on("message", function(message) {
             .addField(" - avatar", "Affiche ton avatar(non fonctionnel pour l'instant).")
             .addField(" - ping", "PING PONG.")
             .addField(" - ip", "Affiche l'IP et me Port du serveur.")
-            .setColor(0x00FFEE)
+            .setColor(FF0000)
             .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
         var embedhelpadmin = new Discord.RichEmbed()
             .setAuthor("💬 Commandes de Modération.")
             .addField(" - clear", "Clear jusqu'à **99** Messages.")
             .addField(" - kick", "Expulser un membre du serveur.")
-            .setColor(0x00FFEE)
+            .setColor(FF0000)
             .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
             message.channel.send(embedhelpmember);
             message.channel.send(embedhelpadmin);
@@ -51,7 +51,7 @@ bot.on("message", function(message) {
         
             .addField("Status:", "En cours de Dev")
 
-            .setColor(0x00FFEE)
+            .setColor(FF0000)
 
             .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
 
@@ -100,7 +100,7 @@ bot.on("message", function(message) {
     
         let kickEmbed = new Discord.RichEmbed()
         .setDescription("**👢 Kicked**")
-        .setColor(0xFF0000)
+        .setColor(FF0000)
         .addField("Personne", `${kUser}`)
         .addField("Modérateur", `<@${message.author.id}>`)
         .addField("Raison", `**\`\`\`${kReason}\`\`\`**`);
