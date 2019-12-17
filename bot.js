@@ -1,6 +1,5 @@
 const Discord = require("discord.js"); // We Call The Packages.
 const Query = require("minecraft-query");
-
 const q = new Query({host: 'game01.ouiheberg.com', port: 25561, timeout: 7500});
 // const PREFIX = "<"; // You can change this Prefix to whatever you want.
 const PREFIX = process.env.PREFIX;
@@ -28,10 +27,10 @@ bot.on("message", function(message) {
     if (command == "help") {
         var embedhelpmember = new Discord.RichEmbed()
             .setAuthor("💬 Liste des Commandes.")
-            .addField(" - avatar", "Montre ta Photo de Profil.")
+            .addField(" - server", "Montre les informations du serveur MCPE.")
             .addField(" - ping", "PING PONG.")
             .setColor(15158332)
-            .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
+            .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
         var embedhelpadmin = new Discord.RichEmbed()
             .setAuthor("💬 Commandes de Modération.")
             .addField(" - clear", "Clear jusqu'à`99` Messages.")
@@ -40,21 +39,34 @@ bot.on("message", function(message) {
             .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
             message.channel.send(embedhelpmember)
         if(message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(embedhelpadmin);
-    };
+};)
 
-    if (command == "avatar") {
-        let member = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-        message.channel.send({
-               embed: {
-                  title: `${member.displayAvatarURL}'s Profile Picture.`,
-                  image: {
-                      url: member.AvatarURL
-                  },
-                  color: 0x00FFEE
-               }
-        })
-    };
+if (command == "server") {
+    message.channel.send("**__Server Info__**"
+);
+    message.channel.send("*Bientôt*");
+   };
+    
+if (command == "test") {
+    message.channel.send("q.fullStat()
+  .then(success => {
 
+    console.log(success);
+
+    return q.basicStat()
+
+  })
+
+  .then(success => {
+
+    console.log(success);
+
+    q.close();
+
+  })") 
+
+
+};
     if (command == "ping") {
         message.channel.send("**:ping_pong: PONG!**");
     };
@@ -90,8 +102,9 @@ bot.on("message", function(message) {
         adminlog.send(kickEmbed);
     };
     
-    
+
 });
+    
 
 // Bot Login.
 // bot.login('YourAwesomeBotToken');
