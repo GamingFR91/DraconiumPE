@@ -36,8 +36,8 @@ bot.on("message", function(message) {
             .addField(" - kick", "Expulser un membre du serveur.")
             .setColor(0x00FFEE)
             .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
-            message.channel.send(embedhelpmember)
-        if(message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(embedhelpadmin);
+            message.channel.send(embedhelpmember);
+            message.channel.send(embedhelpadmin);
     };
     if (command == "ip") {
 
@@ -48,6 +48,8 @@ bot.on("message", function(message) {
             .addField("IP:", "Soon...")
 
             .addField("Port:", "Soon...")
+        
+            .addField("Status:", "En cours de Dev")
 
             .setColor(0x00FFEE)
 
