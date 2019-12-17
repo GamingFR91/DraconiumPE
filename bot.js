@@ -80,7 +80,7 @@ bot.on("message", function(message) {
     };
 
     if(command === "clear") {
-        if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply("**🔒 Sorry, you can't do that.**");
+        if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply("**🔒 Désolé, mais tu n'a pas de Permission.**");
         var messagesToDelete = args[1];
         if (!args[1]) return message.channel.send("❌ Merci de donner le nombre de messages à Clear.");
 
