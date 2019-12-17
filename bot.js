@@ -6,7 +6,7 @@ var bot = new Discord.Client();
 
 // Events.
 bot.on("ready", function() {
-    bot.user.setGame(`/help | Draconium`);
+    bot.user.setActivity('/help | Draconium', { type: 'STREAMING' });
     console.log(`${bot.user.username} est Prêt!`);
 });
 
