@@ -68,7 +68,7 @@ bot.on("message", function(message) {
                embed: {
                   title: `${member}'s Profile Picture.`,
                   image: {
-                      url: member.displayAvatarURL
+                      url: member.user.displayAvatarURL
                   },
                   color: 0x00FFEE
                }
