@@ -29,13 +29,13 @@ bot.on("message", function(message) {
             .setAuthor("💬 Liste des Commandes.")
             .addField(" - server", "Montre les informations du serveur MCPE.")
             .addField(" - ping", "PING PONG.")
-            .setColor(15158332)
+            .setColor(0x00FFEE)
             .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
         var embedhelpadmin = new Discord.RichEmbed()
             .setAuthor("💬 Commandes de Modération.")
             .addField(" - clear", "Clear jusqu'à`99` Messages.")
             .addField(" - kick", "Kick quelqu'un du serveur.")
-            .setColor(15158332)
+            .setColor(0x00FFEE)
             .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
             message.channel.send(embedhelpmember)
         if(message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(embedhelpadmin);
@@ -77,7 +77,7 @@ if (command == "test") {
     
         let kickEmbed = new Discord.RichEmbed()
         .setDescription("**👢 Kick**")
-        .setColor(15158332)
+        .setColor(0x00FFEE)
         .addField("Utilisateur", `${kUser}`)
         .addField("Moderateurr", `<@${message.author.id}>`)
         .addField("Raison", `**\`\`\`${kReason}\`\`\`**`);
