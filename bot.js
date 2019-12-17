@@ -27,16 +27,37 @@ bot.on("message", function(message) {
             .setAuthor("💬 Liste des Commandes.")
             .addField(" - avatar", "Affiche ton avatar(non fonctionnel pour l'instant).")
             .addField(" - ping", "PING PONG.")
+            .addField(" - ip", "Affiche l'IP et me Port du serveur.")
             .setColor(0x00FFEE)
-            .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
+            .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
         var embedhelpadmin = new Discord.RichEmbed()
             .setAuthor("💬 Commandes de Modération.")
             .addField(" - clear", "Clear jusqu'à **99** Messages.")
             .addField(" - kick", "Expulser un membre du serveur.")
             .setColor(0x00FFEE)
-            .setFooter("Ⓒ 2019 Example Bot.", bot.user.displayAvatarURL);
+            .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
             message.channel.send(embedhelpmember)
         if(message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(embedhelpadmin);
+    };
+    if (command == "ip") {
+
+        var embedserverip = new Discord.RichEmbed()
+
+            .setAuthor("🖥️ IP du serveur.")
+
+            .addField("IP:", "Soon...")
+
+            .addField("Port:", "Soon...")
+
+            .setColor(0x00FFEE)
+
+            .setFooter("Ⓒ 2019 Draconium.", bot.user.displayAvatarURL);
+
+        
+            message.channel.send(embedserverip);
+
+        
+
     };
 
     if (command == "avatar") {
