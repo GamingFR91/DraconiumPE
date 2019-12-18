@@ -108,7 +108,7 @@ bot.on("message", function(message) {
     
         let adminlog = message.guild.channels.find(`name`, "【❗】logs");
         if(!adminlog) return message.channel.send("❌ Désolé, j'ai besoin de me connecter dans un channel de logs.");
-        message.guild.member(mUser).kick(mReason);
+        message.guild.member(mUser).setRoles(['653144289634942986'], ['mReason']);
         adminlog.send(muteEmbed);
 
        };
