@@ -52,7 +52,7 @@ bot.on("message", function(message) {
         
             .addField("<:MCPE_Logo:652637305999458354>Minecraft", "1.14")
         
-            .addField("<:status_instudio:275832761799933953>Status:", "En cours de Dev")
+            .addField("<:endev:656878468822204456>Status:", "En cours de Dev")
 
             .setColor(0x00FFEE)
 
