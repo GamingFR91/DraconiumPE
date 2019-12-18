@@ -111,6 +111,7 @@ bot.on("message", function(message) {
         message.guild.member(mUser).kick(mReason);
         adminlog.send(muteEmbed);
 
+       };
     if(command == "kick") {
         message.delete()
         let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
