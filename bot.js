@@ -39,6 +39,7 @@ bot.on("message", function(message) {
             message.channel.send(embedhelpmember);
             message.channel.send(embedhelpadmin);
     };
+   
     if (command == "ip") {
 
         var embedserverip = new Discord.RichEmbed()
@@ -89,6 +90,26 @@ bot.on("message", function(message) {
         .then(messages => message.channel.bulkDelete(messages.size + 1))
         .catch(error => message.channel.send(`❌ Désolé ${message.author}, Échec du Clear car: *${error}*.`));
     };
+    
+    if(command == "mute") {
+        message.delete()
+        let mUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+        if(!mUser) return message.channel.send("❌ Merci de **@mention** la personne à Mute!");
+        let mReason = args.join(" ").slice(0);
+        if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("**🔒 Désolé, tu ne peux pas faire ça.**");
+        if(kUser.hasPermission("ADMINISTRATOR")) return message.channel.send("❌ Échec du Mute, la personne a la permission Administrateur.");
+    
+        let muteEmbed = new Discord.RichEmbed()
+        .setDescription("**🔇 Mute**")
+        .setColor(0x00FFEE)
+        .addField("Personne", `${mUser}`)
+        .addField("Administrateur", `<@${message.author.id}>`)
+        .addField("Raison", `**\`\`\`${mReason}\`\`\`**`);
+    
+        let adminlog = message.guild.channels.find(`name`, "【❗】logs");
+        if(!adminlog) return message.channel.send("❌ Désolé, j'ai besoin de me connecter dans un channel de logs.");
+        message.guild.member(mUser).kick(mReason);
+        adminlog.send(muteEmbed);
 
     if(command == "kick") {
         message.delete()
