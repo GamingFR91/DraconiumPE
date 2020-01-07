@@ -42,6 +42,15 @@ bot.on("message", function(message) {
             message.channel.send(embedhelpadmin);
     };
    
+    var queryMC = q.fullStat()
+  .then(success => {
+
+    console.log(success);
+
+    return q.basicStat()
+
+  });
+    
     if (command == "ip") {
 
         var embedserverip = new Discord.RichEmbed()
@@ -85,7 +94,7 @@ bot.on("message", function(message) {
     };
     
     if (command == "test") {
-        message.channel.send("Pas de test poir le moment");
+        message.channel.send("queryMC");
     };
 
     if(command === "clear") {
