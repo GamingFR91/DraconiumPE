@@ -1,6 +1,8 @@
 const Discord = require("discord.js"); // We Call The Packages.
 // const PREFIX = "<"; // You can change this Prefix to whatever you want.
 const PREFIX = process.env.PREFIX;
+const Query = require("minecraft-query");
+const q = new Query({host: 'game01.ouiheberg.com', port: 25561, timeout: 7500});
 
 var bot = new Discord.Client();
 
@@ -80,6 +82,10 @@ bot.on("message", function(message) {
 
     if (command == "ping") {
         message.channel.send("**:ping_pong: PONG!**");
+    };
+    
+    if (command == "test") {
+        message.channel.send("Pas de test poir le moment");
     };
 
     if(command === "clear") {
