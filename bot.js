@@ -42,14 +42,7 @@ bot.on("message", function(message) {
             message.channel.send(embedhelpadmin);
     };
    
-    var queryMC = q.fullStat()
-  .then(success => {
 
-    console.log(success);
-
-    return q.basicStat()
-
-  });
     
     if (command == "ip") {
 
@@ -94,7 +87,19 @@ bot.on("message", function(message) {
     };
     
     if (command == "test") {
-        message.channel.send("queryMC");
+        message.channel.send("q.fullStat()
+  .then(success => {
+
+    console.log(success);
+
+    return q.basicStat()
+
+  })
+
+   .then(success => {
+
+    console.log(success);
+           })");
     };
 
     if(command === "clear") {
