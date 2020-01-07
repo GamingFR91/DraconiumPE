@@ -87,19 +87,7 @@ bot.on("message", function(message) {
     };
     
     if (command == "test") {
-        message.channel.send("q.fullStat()
-  .then(success => {
-
-    console.log(success);
-
-    return q.basicStat()
-
-  })
-
-   .then(success => {
-
-    console.log(success);
-           })");
+        message.channel.send("Pas de test poir le moment");
     };
 
     if(command === "clear") {
