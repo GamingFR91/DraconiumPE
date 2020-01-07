@@ -87,7 +87,7 @@ bot.on("message", function(message) {
     };
     
     if (command == "test") {
-        message.channel.send("Pas de test poir le moment");
+        message.channel.send("Pas de test pour le moment");
     };
 
     if(command === "clear") {
