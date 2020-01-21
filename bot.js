@@ -2,7 +2,7 @@ const Discord = require("discord.js"); // We Call The Packages.
 // const PREFIX = "<"; // You can change this Prefix to whatever you want.
 const PREFIX = process.env.PREFIX;
 const Query = require("minecraft-query");
-const q = new Query({host: 'game01.ouiheberg.com', port: 25561, timeout: 7500});
+
 
 var bot = new Discord.Client();
 
@@ -41,7 +41,7 @@ bot.on("message", function(message) {
     if (command == "help") {
         var embedhelpmember = new Discord.RichEmbed()
             .setAuthor("💬 Liste des Commandes.")
-            .addField(" - avatar", "Affiche ton avatar(non fonctionnel pour l'instant).")
+            .addField(" - avatar", "Affiche ton avatar.")
             .addField(" - ping", "PING PONG.")
             .addField(" - ip", "Affiche l'IP et le Port du serveur.")
             .setColor(0xFF0011)
