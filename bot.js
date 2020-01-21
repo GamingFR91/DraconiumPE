@@ -20,7 +20,7 @@ bot.on('guildMemberAdd', member => {
 
 bot.on('guildMemberRemove', member => {
 
-    member.guild.channels.get('652994649497010176').send('**' + member.user.username + '**, a quitté le serveur');
+    member.guild.channels.get('652995719703166995').send('**' + member.user.username + '**, a quitté le serveur');
 
     //
 
@@ -89,7 +89,7 @@ bot.on("message", function(message) {
                embed: {
                   title: `Photo de profil de ${member.user.username}:`,
                   image: {
-                      url: member.user.AvatarURL
+                      url: member.user.displayAvatarURL
                   },
                   color: 0xFF0011
                }
