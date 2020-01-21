@@ -12,6 +12,20 @@ bot.on("ready", function() {
     console.log(`${bot.user.username} est Prêt!`);
 });
 
+bot.on('guildMemberAdd', member => {
+
+    member.guild.channels.get('652994649497010176').send('**' + member.user.username + '**, a rejoint le serveur'); 
+
+});
+
+bot.on('guildMemberRemove', member => {
+
+    member.guild.channels.get('652994649497010176').send('**' + member.user.username + '**, a quitté le serveur');
+
+    //
+
+});
+
 bot.on("message", function(message) {
 
     if (message.author.bot) return;
@@ -30,13 +44,13 @@ bot.on("message", function(message) {
             .addField(" - avatar", "Affiche ton avatar(non fonctionnel pour l'instant).")
             .addField(" - ping", "PING PONG.")
             .addField(" - ip", "Affiche l'IP et le Port du serveur.")
-            .setColor(0x00FFEE)
+            .setColor(0xFF0011)
             .setFooter("Ⓒ 2019-2020 Draconium.", bot.user.displayAvatarURL);
         var embedhelpadmin = new Discord.RichEmbed()
             .setAuthor("💬 Commandes de Modération.")
             .addField(" - clear", "Clear jusqu'à **99** Messages.")
             .addField(" - kick", "Expulser un membre du serveur.")
-            .setColor(0x00FFEE)
+            .setColor(0xFF0011)
             .setFooter("Ⓒ 2019-2020 Draconium.", bot.user.displayAvatarURL);
             message.channel.send(embedhelpmember);
             message.channel.send(embedhelpadmin);
@@ -58,7 +72,7 @@ bot.on("message", function(message) {
         
             .addField("<:endev:656878468822204456>Status:", "En cours de Dev")
 
-            .setColor(0x00FFEE)
+            .setColor(0xFF0011)
 
             .setFooter("Ⓒ 2019-2020 Draconium.", bot.user.displayAvatarURL);
 
@@ -73,11 +87,11 @@ bot.on("message", function(message) {
         let member = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         message.channel.send({
                embed: {
-                  title: `${member.displayAvatarURL}'s Profile Picture.`,
+                  title: `Photo de profil de ${member.user.username}:`,
                   image: {
-                      url: member.AvatarURL
+                      url: member.user.AvatarURL
                   },
-                  color: 0x00FFEE
+                  color: 0xFF0011
                }
         })
     };
@@ -111,7 +125,7 @@ bot.on("message", function(message) {
     
         let kickEmbed = new Discord.RichEmbed()
         .setDescription("**👢 Kicked**")
-        .setColor(0x00FFEE)
+        .setColor(0xFF0011)
         .addField("Personne", `${kUser}`)
         .addField("Modérateur", `<@${message.author.id}>`)
         .addField("Raison", `**\`\`\`${kReason}\`\`\`**`);
