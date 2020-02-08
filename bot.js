@@ -64,13 +64,13 @@ bot.on("message", function(message) {
 
             .setAuthor("Draconium")
 
-            .addField("📡IP:", "Soon...")
+            .addField("📡IP:", "draconium.ouimc.fr")
 
-            .addField("🛰️Port:", "Soon...")
+            .addField("🛰️Port:", "25561")
         
             .addField("<:MCPE_Logo:652637305999458354>Minecraft:", "1.14")
         
-            .addField("<:endev:656878468822204456>Status:", "En cours de Dev")
+            .addField("<:online:675622232155881495>Status:", "En cours de Dev")
 
             .setColor(0xFF0011)
 
