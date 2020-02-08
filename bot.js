@@ -70,7 +70,7 @@ bot.on("message", function(message) {
         
             .addField("<:MCPE_Logo:652637305999458354>Minecraft:", "1.14")
         
-            .addField("<:online:675622232155881495>Status:", "En cours de Dev")
+            .addField("<:online:675622232155881495>Status:", "Ouvert")
 
             .setColor(0xFF0011)
 
