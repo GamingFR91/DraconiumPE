@@ -60,7 +60,7 @@ bot.on("message", function(message) {
         
             .addField("<:online:675622232155881495>Status:", "En Ligne")
                 
-            .addField("Joueurs:", body.players.now + "/" + body.players.max)
+            .addField("🎮Joueurs:", body.players.now + "/" + body.players.max)
 
             .setColor(0xFF0011)
 
