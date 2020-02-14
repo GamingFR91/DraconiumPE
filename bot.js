@@ -2,7 +2,7 @@ const Discord = require("discord.js"); // We Call The Packages.
 // const PREFIX = "<"; // You can change this Prefix to whatever you want.
 const PREFIX = process.env.PREFIX;
 const Query = require("minecraft-query");
-
+var request = require('request');
 
 var bot = new Discord.Client();
 
@@ -38,6 +38,45 @@ bot.on("message", function(message) {
     var command = args[0].toLowerCase();
 
 // Commands.
+    if(command == ip
+    var url = 'http://mcapi.us/server/status?ip=draconium.ouimc.fr&port=25561';
+        request(url, function(err, response, body) {
+            if(err) {
+                console.log(err);
+                return message.reply('Error pendent la récupération du Status du Serveur');
+            }
+            body = JSON.parse(body);
+            var status = ;
+            if(body.online) {
+                status = new Discord.RichEmbed()
+
+            .setAuthor("Draconium")
+
+            .addField("📡IP:", "draconium.ouimc.fr")
+
+            .addField("🛰️Port:", "25561")
+        
+            .addField("<:MCPE_Logo:652637305999458354>Minecraft:", "1.14")
+        
+            .addField("<:online:675622232155881495>Status:", "En Ligne")
+                
+            .addField("")
+
+            .setColor(0xFF0011)
+
+            .setFooter("Ⓒ 2019-2020 Draconium.", bot.user.displayAvatarURL);
+            };
+                if(body.players.now) {
+                    status += '**' + body.players.now + '** Joueurs';
+else {
+                    status += '*Nobody is playing!*';
+                }
+            }
+            message.reply(status);
+        });
+    }
+    
+    
     if (command == "help") {
         var embedhelpmember = new Discord.RichEmbed()
             .setAuthor("💬 Liste des Commandes.")
@@ -58,7 +97,7 @@ bot.on("message", function(message) {
    
 
     
-    if (command == "ip") {
+    if (command == "llllll") {
 
         var embedserverip = new Discord.RichEmbed()
 
@@ -70,16 +109,16 @@ bot.on("message", function(message) {
         
             .addField("<:MCPE_Logo:652637305999458354>Minecraft:", "1.14")
         
-            .addField("<:online:675622232155881495>Status:", "Ouvert")
+            .addField("<:online:675622232155881495>Status:", "Hors Ligne")
 
             .setColor(0xFF0011)
 
             .setFooter("Ⓒ 2019-2020 Draconium.", bot.user.displayAvatarURL);
 
-        
-            message.channel.send(embedserverip);
+        message.channel.send(embedserverip);
 
-        
+
+       };
 
     };
 
