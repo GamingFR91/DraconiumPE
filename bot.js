@@ -2,7 +2,7 @@ const Discord = require("discord.js"); // We Call The Packages.
 // const PREFIX = "<"; // You can change this Prefix to whatever you want.
 const PREFIX = process.env.PREFIX;
 const Query = require("minecraft-query");
-var request = require('request');
+
 
 var bot = new Discord.Client();
 
@@ -38,8 +38,6 @@ bot.on("message", function(message) {
     var command = args[0].toLowerCase();
 
 // Commands.
-    
-    
     if (command == "help") {
         var embedhelpmember = new Discord.RichEmbed()
             .setAuthor("💬 Liste des Commandes.")
@@ -72,16 +70,16 @@ bot.on("message", function(message) {
         
             .addField("<:MCPE_Logo:652637305999458354>Minecraft:", "1.14")
         
-            .addField("<:online:675622232155881495>Status:", "En Ligne")
+            .addField("<:online:675622232155881495>Status:", "Ouvert")
 
             .setColor(0xFF0011)
 
             .setFooter("Ⓒ 2019-2020 Draconium.", bot.user.displayAvatarURL);
 
-        message.channel.send(embedserverip);
+        
+            message.channel.send(embedserverip);
 
-
-       };
+        
 
     };
 
