@@ -39,7 +39,57 @@ bot.on("message", function(message) {
 
 // Commands.
     
-    
+    if(command == ip) {
+    var url = 'http://mcapi.us/server/query?ip=draconium.ouimc.fr&port=25561';
+        request(url, function(err, response, body) {
+            if(err) {
+                console.log(err);
+                return message.reply('Une erreur a eu lieu pendent la récupération du Status du Serveur');
+            }
+            body = JSON.parse(body);
+            var status = ;
+            if(body.online) {
+                status = new Discord.RichEmbed()
+
+            .setAuthor("Draconium")
+
+            .addField("📡IP:", "draconium.ouimc.fr")
+
+            .addField("🛰️Port:", "25561")
+        
+            .addField("<:MCPE_Logo:652637305999458354>Minecraft:", "1.14")
+        
+            .addField("<:online:675622232155881495>Status:", "En Ligne")
+                
+            .addField("Joueurs:", body.players.now + "/" + body.players.max)
+
+            .setColor(0xFF0011)
+
+            .setFooter("Ⓒ 2019-2020 Draconium.", bot.user.displayAvatarURL);
+            }
+             
+
+else {
+                    status += new Discord.RichEmbed()
+
+            .setAuthor("Draconium")
+
+            .addField("📡IP:", "draconium.ouimc.fr")
+
+            .addField("🛰️Port:", "25561")
+        
+            .addField("<:MCPE_Logo:652637305999458354>Minecraft:", "1.14")
+        
+            .addField("<:offline:677930869599764496>Status:", "Hors Ligne")
+
+            .setColor(0xFF0011)
+
+            .setFooter("Ⓒ 2019-2020 Draconium.", bot.user.displayAvatarURL);;
+                }
+            }
+            message.reply(status);
+        });
+    };
     
     if (command == "help") {
         var embedhelpmember = new Discord.RichEmbed()
@@ -61,7 +111,7 @@ bot.on("message", function(message) {
    
 
     
-    if (command == "ip") {
+    if (command == "lll") {
 
         var embedserverip = new Discord.RichEmbed()
 
