@@ -38,12 +38,12 @@ bot.on("message", function(message) {
     var command = args[0].toLowerCase();
 
 // Commands.
-    if(command == ip
+    if(command == ip) {
     var url = 'http://mcapi.us/server/status?ip=draconium.ouimc.fr&port=25561';
         request(url, function(err, response, body) {
             if(err) {
                 console.log(err);
-                return message.reply('Error pendent la récupération du Status du Serveur');
+                return message.reply('Une erreur a eu lieu pendent la récupération du Status du Serveur');
             }
             body = JSON.parse(body);
             var status = ;
