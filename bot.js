@@ -14,7 +14,7 @@ bot.on("ready", function() {
 
 bot.on('guildMemberAdd', member => {
 
-    member.guild.channels.get('652994649497010176').send('Hey **' + member.user.tag + '**, bienvenue sur le meilleur le plus chili serveur  ---> ** ' + guilds.get(652635222055321629).name + ' ** amuse toi sur ce serveur 0 insulte 100% chili le meilleur moyen de ce faire des potes :tada::hugging: !'); 
+    member.guild.channels.get('652994649497010176').send('Hey **' + member.user.tag + '**, bienvenue sur le meilleur le plus chili serveur  ---> **D R A C O N I U M** amuse toi sur ce serveur 0 insulte 100% chili le meilleur moyen de ce faire des potes :tada::hugging: !'); 
 
 });
 
