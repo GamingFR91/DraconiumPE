@@ -47,14 +47,14 @@ bot.on("message", function(message) {
             .addField(" - report", "Permettre de Signaler quelqu'un vers le staff.")
             .addField(" - suggest", "Permet d'envoyer une Suggestion au Staff")
             .setColor(0xFF0011)
-            .setImage(bot.user.avatarURL)
+            .setImage(bot.user.displayAvatarURL)
             .setFooter("Ⓒ 2019-2020 Draconium.", bot.user.displayAvatarURL);
         var embedhelpadmin = new Discord.RichEmbed()
             .setAuthor("💬 Commandes de Modération.")
             .addField(" - clear", "Clear jusqu'à **99** Messages.")
             .addField(" - kick", "Expulser un membre du serveur.")
             .setColor(0xFF0011)
-            .setImage(bot.use.avatarURL)
+            .setImage(bot.user.displayAvatarURL)
             .setFooter("Ⓒ 2019-2020 Draconium.", bot.user.displayAvatarURL);
             message.author.send(embedhelpmember);
             message.author.send(embedhelpadmin);
