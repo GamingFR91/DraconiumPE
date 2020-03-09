@@ -177,7 +177,7 @@ bot.on("message", function(message) {
 
         
 
-        let SuggestEmbed = new Discord.RichEmbed()
+        let SuggEmbed = new Discord.RichEmbed()
 
         .setDescription("**Suggestion**")
 
@@ -201,7 +201,7 @@ bot.on("message", function(message) {
 
         if(!sugglog) return message.channel.send("❌ Désolé, j'ai besoin de me connecter dans un channel de Suggestion.");
 
-        sugglog.send(SuggestEmbed).then(s => {
+        sugglog.send(SuggEmbed).then(s => {
 
          s.react('✅');
 
