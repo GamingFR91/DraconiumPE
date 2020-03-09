@@ -120,7 +120,7 @@ bot.on("message", function(message) {
         message.delete()
         let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         if(!kUser) return message.channel.send("❌ Merci de **@mention** la personne à Expulser!");
-        let kReason = args.join(" ").slice(0);
+        let kReason = args.slice(2).join(" ");
         if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("**🔒 Désolé, tu ne peux pas faire ça.**");
         if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send("❌ Échec du Kick, j'ai besoin d'un rôle plus haut.");
     
