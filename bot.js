@@ -103,8 +103,8 @@ bot.on("message", function(message) {
     };
     
     if (command == "test") {
-        let member = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-        message.channel.send(member.user.tag);
+        const DiscordServ = bot.guilds.get(guild.id)
+        message.channel.send(guild.memberCount);
     };
 
     if(command === "clear") {
@@ -173,7 +173,7 @@ bot.on("message", function(message) {
 
         let Suggestion = args.slice(1).join(" ");
 
-        if(!Suggestion) return message.channel.send("❌ Merci de donner la Raison de votre Suggestion!");
+        if(!Suggestion) return message.channel.send("❌ Merci de donner votre Suggestion!");
 
         
 
