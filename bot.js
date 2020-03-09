@@ -103,8 +103,7 @@ bot.on("message", function(message) {
         .setDescription("Ping")
         .addField("```🏓Pong```")
         .setColor(0xFF0011)
-        .addField(" ")
-        .addField(bot.ping + "ms");
+        .addField("```" + bot.ping + "ms```");
         message.channel.send(PingEmbed);
     };
     
