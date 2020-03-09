@@ -139,7 +139,7 @@ bot.on("message", function(message) {
         message.delete()
         let Report = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         if(!Report) return message.channel.send("❌ Merci de **@mention** la personne à Signaler!");
-        let rReason = args.join(" ").slice(0);
+        let rReason = args[1];
         if(!rReason) return message.channel.send("❌ Merci de donner la Raison de votre Report!");
         
         
