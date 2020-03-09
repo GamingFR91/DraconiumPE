@@ -189,9 +189,9 @@ bot.on("message", function(message) {
 
         .addField("Suggestion de: ", `<@${message.author.id}>`)
        
-        .addField(" ", " ")
         
-        .addField(" ", " ") 
+        
+       
 
         .addField("Idée", `**\`\`\`${Suggestion}\`\`\`**`);
 
