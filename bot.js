@@ -44,6 +44,7 @@ bot.on("message", function(message) {
             .addField(" - avatar", "Affiche ton avatar.")
             .addField(" - ping", "PING PONG.")
             .addField(" - ip", "Affiche l'IP et le Port du serveur.")
+            .addField(" - report", "Permettre de Signaler quelqu'un vers le staff.")
             .setColor(0xFF0011)
             .setFooter("Ⓒ 2019-2020 Draconium.", bot.user.displayAvatarURL);
         var embedhelpadmin = new Discord.RichEmbed()
@@ -64,13 +65,13 @@ bot.on("message", function(message) {
 
             .setAuthor("Draconium")
 
-            .addField("📡IP:", "draconium.ouimc.fr")
+            .addField("📡IP:", "Soon...")
 
-            .addField("🛰️Port:", "25561")
+            .addField("🛰️Port:", "Soon...")
         
             .addField("<:MCPE_Logo:652637305999458354>Minecraft:", "1.14")
         
-            .addField("<:online:675622232155881495>Status:", "Ouvert")
+            .addField("<:online:675622232155881495>Status:", "En Développement")
 
             .setColor(0xFF0011)
 
