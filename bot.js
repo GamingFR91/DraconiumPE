@@ -99,7 +99,13 @@ bot.on("message", function(message) {
     };
 
     if (command == "ping") {
-        message.channel.send("**:ping_pong: PONG!**");
+        let PingEmbed = new Discord.RichEmbed()
+        .setDescription("Ping")
+        .addField("```🏓Pong```")
+        .setColor(0xFF0011)
+        .addField(" ")
+        .addField(bot.ping + "ms");
+        message.channel.send(PingEmbed);
     };
     
     if (command == "test") {
