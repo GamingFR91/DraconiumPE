@@ -14,13 +14,13 @@ bot.on("ready", function() {
 
 bot.on('guildMemberAdd', member => {
 
-    member.guild.channels.get('652994649497010176').send('Hey **' + member.user.username + '**, bienvenue sur le meilleur le plus chili serveur  ---> **${guild.name}** amuse toi sur ce serveur 0 insulte 100% chili le meilleur moyen de ce faire des potes :tada::hugging: !'); 
+    member.guild.channels.get('652994649497010176').send('Hey **' + member.user.tag + '**, bienvenue sur le meilleur le plus chili serveur  ---> **${guild.name}** amuse toi sur ce serveur 0 insulte 100% chili le meilleur moyen de ce faire des potes :tada::hugging: !'); 
 
 });
 
 bot.on('guildMemberRemove', member => {
 
-    member.guild.channels.get('652995719703166995').send('**' + member.user.username + '** vien juste de quitter le serveur nous espérons te revoir très prochainement :slight_frown:');
+    member.guild.channels.get('652995719703166995').send('**' + member.user.tag + '** vien juste de quitter le serveur nous espérons te revoir très prochainement :slight_frown:');
 
     //
 
