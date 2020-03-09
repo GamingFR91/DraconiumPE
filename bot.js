@@ -101,9 +101,9 @@ bot.on("message", function(message) {
     if (command == "ping") {
         let PingEmbed = new Discord.RichEmbed()
         .setDescription("Ping")
-        .addField("```🏓Pong```", "``````")
-        .setColor(0xFF0011)
-        .addField("```" + bot.ping + "ms```", "``````");
+        .addField("```🏓Pong```", "```" + bot.ping + "ms```")
+        .setColor(0xFF0011);
+        
         message.channel.send(PingEmbed);
     };
     
