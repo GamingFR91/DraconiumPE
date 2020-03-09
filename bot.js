@@ -54,8 +54,8 @@ bot.on("message", function(message) {
             .addField(" - kick", "Expulser un membre du serveur.")
             .setColor(0xFF0011)
             .setFooter("Ⓒ 2019-2020 Draconium.", bot.user.displayAvatarURL);
-            message.channel.send(embedhelpmember);
-            message.channel.send(embedhelpadmin);
+            message.author.send(embedhelpmember);
+            message.author.send(embedhelpadmin);
     };
    
 
