@@ -45,6 +45,7 @@ bot.on("message", function(message) {
             .addField(" - ping", "PING PONG.")
             .addField(" - ip", "Affiche l'IP et le Port du serveur.")
             .addField(" - report", "Permettre de Signaler quelqu'un vers le staff.")
+            .addField(" - suggest", "Permet d'envoyer une Suggestion au Staff")
             .setColor(0xFF0011)
             .setFooter("Ⓒ 2019-2020 Draconium.", bot.user.displayAvatarURL);
         var embedhelpadmin = new Discord.RichEmbed()
