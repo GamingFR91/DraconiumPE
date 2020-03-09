@@ -155,11 +155,8 @@ bot.on("message", function(message) {
         if(!reportlog) return message.channel.send("❌ Désolé, j'ai besoin de me connecter dans un channel de Report.");
 
 
-        reportlog.send(ReportEmbed)
-                .then(function (message) {
-                    message.react('✅');
-                    message.react('❌');
-         } 
+        reportlog.send(ReportEmbed);
+
     };
 
 });
