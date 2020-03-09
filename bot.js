@@ -162,6 +162,54 @@ bot.on("message", function(message) {
         
 
     };
+    
+    if(command == "suggest") {
+
+        message.delete()
+
+
+
+        let Suggestion = args.slice(1).join(" ");
+
+        if(!Suggestion) return message.channel.send("❌ Merci de donner la Raison de votre Suggestion!");
+
+        
+
+        
+
+        let SuggestEmbed = new Discord.RichEmbed()
+
+        .setDescription("**Suggestion**")
+
+        .setColor(0xFF0011)
+
+
+       
+
+
+        .addField("Suggestion de: ", `<@${message.author.id}>`)
+       
+        .addField(" ", " ")
+        
+        .addField(" ", " ") 
+
+        .addField("Idée", `**\`\`\`${Suggestion}\`\`\`**`);
+
+    
+
+        let sugglog = message.guild.channels.find(`name`, "【🔧】suggestions");
+
+        if(!sugglog) return message.channel.send("❌ Désolé, j'ai besoin de me connecter dans un channel de Suggestion.");
+
+        sugglog.send(SuggestEmbed).then(s => {
+
+         s.react('✅');
+
+         s.react('❌');
+
+        })
+        
+       };
 
 });
 
