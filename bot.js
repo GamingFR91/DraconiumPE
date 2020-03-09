@@ -150,7 +150,7 @@ bot.on("message", function(message) {
         .addField("Report par", `<@${message.author.id}>`)
         .addField("Raison", `**\`\`\`${rReason}\`\`\`**`);
     
-        let reportlog = message.guild.channels.find(`name`, "【🚫】Report");
+        let reportlog = message.guild.channels.find(`name`, "【🚫】report");
         if(!reportlog) return message.channel.send("❌ Désolé, j'ai besoin de me connecter dans un channel de Report.");
 
         reportlog.send(ReportEmbed);
