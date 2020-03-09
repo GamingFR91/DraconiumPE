@@ -102,7 +102,8 @@ bot.on("message", function(message) {
     };
     
     if (command == "test") {
-        message.channel.send("Pas de test pour le moment");
+        let member = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+        message.channel.send("${member.user.tag}");
     };
 
     if(command === "clear") {
