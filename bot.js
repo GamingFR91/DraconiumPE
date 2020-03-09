@@ -105,7 +105,7 @@ bot.on("message", function(message) {
     if (command == "test") {
         const DiscordServ = bot.guilds.get(message.guild.id)
         message.channel.send(DiscordServ.memberCount);
-        message.channel.send(DiscordServ.owner.tag);
+        message.channel.send(DiscordServ.owner);
     };
 
     if(command === "clear") {
