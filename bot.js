@@ -47,6 +47,7 @@ bot.on("message", function(message) {
             .addField(" - report", "Permettre de Signaler quelqu'un vers le staff.")
             .addField(" - suggest", "Permet d'envoyer une Suggestion au Staff")
             .setColor(0xFF0011)
+            .setImage(bot.user.avatarURL)
             .setFooter("Ⓒ 2019-2020 Draconium.", bot.user.displayAvatarURL);
         var embedhelpadmin = new Discord.RichEmbed()
             .setAuthor("💬 Commandes de Modération.")
@@ -100,8 +101,8 @@ bot.on("message", function(message) {
 
     if (command == "ping") {
         let PingEmbed = new Discord.RichEmbed()
-        .setDescription("Ping")
-        .addField("```🏓Pong```", "```" + bot.ping + "ms```")
+        .setDescription("**Ping**")
+        .addField("🏓Pong", "```" + bot.ping + "ms```")
         .setColor(0xFF0011);
         
         message.channel.send(PingEmbed);
