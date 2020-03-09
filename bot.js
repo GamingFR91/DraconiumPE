@@ -101,7 +101,7 @@ bot.on("message", function(message) {
 
     if (command == "ping") {
         let PingEmbed = new Discord.RichEmbed()
-        .setAuthor("Ping")
+        .setAuthor("♥️Ping")
         .addField("🏓Pong", "```" + bot.ping + "ms```")
         .setColor(0xFF0011);
         message.delete();
