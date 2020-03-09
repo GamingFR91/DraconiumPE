@@ -54,6 +54,7 @@ bot.on("message", function(message) {
             .addField(" - clear", "Clear jusqu'à **99** Messages.")
             .addField(" - kick", "Expulser un membre du serveur.")
             .setColor(0xFF0011)
+            .setImage(bot.use.avatarURL)
             .setFooter("Ⓒ 2019-2020 Draconium.", bot.user.displayAvatarURL);
             message.author.send(embedhelpmember);
             message.author.send(embedhelpadmin);
