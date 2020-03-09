@@ -154,7 +154,12 @@ bot.on("message", function(message) {
         let reportlog = message.guild.channels.find(`name`, "【🚫】report");
         if(!reportlog) return message.channel.send("❌ Désolé, j'ai besoin de me connecter dans un channel de Report.");
 
-        reportlog.send(ReportEmbed);
+
+        reportlog.send(ReportEmbed)
+                .then(function (message) {
+                    message.react('✅');
+                    message.react('❌');
+         } 
     };
 
 });
