@@ -80,7 +80,7 @@ bot.on("message", function(message) {
 
         
             message.channel.send(embedserverip);
-
+            message.delete();
         
 
     };
@@ -96,14 +96,15 @@ bot.on("message", function(message) {
                   color: 0xFF0011
                }
         })
+        message.delete();
     };
 
     if (command == "ping") {
         let PingEmbed = new Discord.RichEmbed()
-        .setDescription("**Ping**")
+        .setAuthor("**Ping**")
         .addField("🏓Pong", "```" + bot.ping + "ms```")
         .setColor(0xFF0011);
-        
+        message.delete();
         message.channel.send(PingEmbed);
     };
     
@@ -123,6 +124,7 @@ bot.on("message", function(message) {
         message.channel.fetchMessages({limit: messagesToDelete})
         .then(messages => message.channel.bulkDelete(messages.size + 1))
         .catch(error => message.channel.send(`❌ Désolé ${message.author}, Échec du Clear car: *${error}*.`));
+        message.delete();
     };
 
     if(command == "kick") {
