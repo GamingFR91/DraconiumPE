@@ -112,7 +112,7 @@ bot.on("message", function(message) {
         const DiscordServ = bot.guilds.get(message.guild.id)
         message.channel.send(DiscordServ.memberCount);
         message.channel.send(DiscordServ.owner.user.tag);
-        message.channel.send(DiscordServ.presenceCount);
+        message.channel.send(DiscordServ.presenceCount.size);
 );
     };
 
