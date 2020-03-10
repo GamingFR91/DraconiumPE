@@ -108,7 +108,7 @@ bot.on("message", function(message) {
         message.channel.send(PingEmbed);
     };
     
-    if (command == "test") or (command == tester) {
+    if (command == "test") or (command == "tester") {
         const DiscordServ = bot.guilds.get(message.guild.id)
         message.channel.send(DiscordServ.memberCount);
         message.channel.send(DiscordServ.owner.user.tag);
